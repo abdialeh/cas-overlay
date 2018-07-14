@@ -1,0 +1,195 @@
+cas.server.name: https://vm-sso:8443
+cas.server.prefix: https://vm-sso:8443/cas
+
+cas.monitor.endpoints.enabled=true
+cas.monitor.endpoints.sensitive=false
+cas.adminPagesSecurity.ip=192\.168\.253\.1
+cas.adminPagesSecurity.loginUrl=https://vm-sso:8443/cas/login
+cas.adminPagesSecurity.service=https://vm-sso:8443/cas/status/dashboard
+cas.adminPagesSecurity.users=file:/etc/cas/config/adminusers.properties
+cas.adminPagesSecurity.adminRoles[0]=ROLE_ADMIN
+cas.adminPagesSecurity.actuatorEndpointsEnabled=true
+
+logging.config=file:/etc/cas/config/log4j2.xml
+
+#cas.serviceRegistry.config.location: file:/etc/cas/services
+
+server.contextPath=/cas
+server.port=8443
+server.ssl.keyStore=file:/etc/cas/thekeystore
+server.ssl.keyStorePassword=changeit
+server.ssl.keyPassword=changeit
+
+#View
+spring.thymeleaf.encoding=UTF-8
+spring.thymeleaf.cache=true
+spring.thymeleaf.mode=HTML
+spring.thymeleaf.prefix=classpath:/templates/
+
+#Localization
+cas.locale.paramName=locale
+cas.locale.defaultValue=en
+
+#Ticket-granting Cookie
+cas.tgc.crypto.encryption.key=iTz47gXM9J0rlxSCkUHLC10--tYDJ4Rim4uUi7iPujA
+cas.tgc.crypto.signing.key=jxgXdkmwvHG3bULK1afPtXJi2sONi7P9N2_fr5gE_oW3BC4-K2_qjwaJ5zc0AVwGZHXp4wD0hQIdTbz1KTdYUw
+
+#Webflow
+cas.webflow.crypto.signing.key=Zzdo-P_iO46vV8kO9jrphIDElLpCz4nf_jVAsdAXr9MIofV7xhOKdfM-oBLilVkTP2ctUEneQumiX8UAQJGmpw
+cas.webflow.crypto.encryption.key=bFgfOzRV929E9qETTsXUDQ
+
+#Authenticate Basic
+cas.authn.accept.users=casuser::Mellon,abdialeh::password.1
+
+#Service Register Using JSON
+cas.serviceRegistry.json.location=classpath:/services
+cas.serviceRegistry.watcherEnabled=true
+cas.serviceRegistry.initFromJson=false
+
+#Monitoring
+cas.monitor.jdbc.validationQuery=SELECT 1
+cas.monitor.jdbc.maxWait=5000
+cas.monitor.jdbc.healthQuery=SELECT 1 FROM INFORMATION_SCHEMA.TABLES
+cas.monitor.jdbc.isolateInternalQueries=false
+cas.monitor.jdbc.url=jdbc:postgresql://192.168.253.133:5432/bantenprov_sso
+cas.monitor.jdbc.failFastTimeout=1
+cas.monitor.jdbc.isolationLevelName=ISOLATION_READ_COMMITTED
+cas.monitor.jdbc.dialect=org.hibernate.dialect.PostgreSQL95Dialect
+#cas.monitor.jdbc.leakThreshold=10
+cas.monitor.jdbc.propagationBehaviorName=PROPAGATION_REQUIRED
+cas.monitor.jdbc.batchSize=1
+cas.monitor.jdbc.user=postgres
+cas.monitor.jdbc.ddlAuto=create-drop
+cas.monitor.jdbc.maxAgeDays=180
+cas.monitor.jdbc.password=password.1
+cas.monitor.jdbc.autocommit=false
+cas.monitor.jdbc.driverClass=org.postgresql.Driver
+#cas.monitor.jdbc.idleTimeout=5000
+#cas.monitor.jdbc.dataSourceName=
+cas.monitor.jdbc.dataSourceProxy=false
+#Hibernate-specific properties (i.e. `hibernate.globally_quoted_identifiers`)
+#cas.monitor.jdbc.properties.propertyName=propertyValue
+
+#Web Application Session
+server.session.timeout=300
+server.session.cookie.httpOnly=true
+server.session.trackingModes=COOKIE
+
+#Ticket Granting Tickets Behavior
+cas.ticket.tgt.onlyTrackMostRecentSession=true
+cas.ticket.tgt.maxLength=50
+
+#Proxy Tickets Behavior
+cas.ticket.pt.timeToKillInSeconds=10
+cas.ticket.pt.numberOfUses=1
+
+#Proxy Granting Tickets Behavior
+cas.ticket.pgt.maxLength=50
+
+#Service Ticket
+cas.ticket.st.maxLength=20
+cas.ticket.st.numberOfUses=1
+cas.ticket.st.timeToKillInSeconds=10
+
+#Logout
+cas.logout.followServiceRedirects=false
+cas.logout.redirectParameter=service
+cas.logout.confirmLogout=false
+cas.logout.removeDescendantTickets=falsecas.server.name: https://vm-sso:8443
+cas.server.prefix: https://vm-sso:8443/cas
+
+cas.monitor.endpoints.enabled=true
+cas.monitor.endpoints.sensitive=false
+cas.adminPagesSecurity.ip=192\.168\.253\.1
+cas.adminPagesSecurity.loginUrl=https://vm-sso:8443/cas/login
+cas.adminPagesSecurity.service=https://vm-sso:8443/cas/status/dashboard
+cas.adminPagesSecurity.users=file:/etc/cas/config/adminusers.properties
+cas.adminPagesSecurity.adminRoles[0]=ROLE_ADMIN
+cas.adminPagesSecurity.actuatorEndpointsEnabled=true
+
+logging.config=file:/etc/cas/config/log4j2.xml
+
+#cas.serviceRegistry.config.location: file:/etc/cas/services
+
+server.contextPath=/cas
+server.port=8443
+server.ssl.keyStore=file:/etc/cas/thekeystore
+server.ssl.keyStorePassword=changeit
+server.ssl.keyPassword=changeit
+
+#View
+spring.thymeleaf.encoding=UTF-8
+spring.thymeleaf.cache=true
+spring.thymeleaf.mode=HTML
+spring.thymeleaf.prefix=classpath:/templates/
+
+#Localization
+cas.locale.paramName=locale
+cas.locale.defaultValue=en
+
+#Ticket-granting Cookie
+cas.tgc.crypto.encryption.key=iTz47gXM9J0rlxSCkUHLC10--tYDJ4Rim4uUi7iPujA
+cas.tgc.crypto.signing.key=jxgXdkmwvHG3bULK1afPtXJi2sONi7P9N2_fr5gE_oW3BC4-K2_qjwaJ5zc0AVwGZHXp4wD0hQIdTbz1KTdYUw
+
+#Webflow
+cas.webflow.crypto.signing.key=Zzdo-P_iO46vV8kO9jrphIDElLpCz4nf_jVAsdAXr9MIofV7xhOKdfM-oBLilVkTP2ctUEneQumiX8UAQJGmpw
+cas.webflow.crypto.encryption.key=bFgfOzRV929E9qETTsXUDQ
+
+#Authenticate Basic
+cas.authn.accept.users=casuser::Mellon,abdialeh::password.1
+
+#Service Register Using JSON
+cas.serviceRegistry.json.location=classpath:/services
+cas.serviceRegistry.watcherEnabled=true
+cas.serviceRegistry.initFromJson=false
+
+#Monitoring
+cas.monitor.jdbc.validationQuery=SELECT 1
+cas.monitor.jdbc.maxWait=5000
+cas.monitor.jdbc.healthQuery=SELECT 1 FROM INFORMATION_SCHEMA.TABLES
+cas.monitor.jdbc.isolateInternalQueries=false
+cas.monitor.jdbc.url=jdbc:postgresql://192.168.253.133:5432/bantenprov_sso
+cas.monitor.jdbc.failFastTimeout=1
+cas.monitor.jdbc.isolationLevelName=ISOLATION_READ_COMMITTED
+cas.monitor.jdbc.dialect=org.hibernate.dialect.PostgreSQL95Dialect
+#cas.monitor.jdbc.leakThreshold=10
+cas.monitor.jdbc.propagationBehaviorName=PROPAGATION_REQUIRED
+cas.monitor.jdbc.batchSize=1
+cas.monitor.jdbc.user=postgres
+cas.monitor.jdbc.ddlAuto=create-drop
+cas.monitor.jdbc.maxAgeDays=180
+cas.monitor.jdbc.password=password.1
+cas.monitor.jdbc.autocommit=false
+cas.monitor.jdbc.driverClass=org.postgresql.Driver
+#cas.monitor.jdbc.idleTimeout=5000
+#cas.monitor.jdbc.dataSourceName=
+cas.monitor.jdbc.dataSourceProxy=false
+#Hibernate-specific properties (i.e. `hibernate.globally_quoted_identifiers`)
+#cas.monitor.jdbc.properties.propertyName=propertyValue
+
+#Web Application Session
+server.session.timeout=300
+server.session.cookie.httpOnly=true
+server.session.trackingModes=COOKIE
+
+#Ticket Granting Tickets Behavior
+cas.ticket.tgt.onlyTrackMostRecentSession=true
+cas.ticket.tgt.maxLength=50
+
+#Proxy Tickets Behavior
+cas.ticket.pt.timeToKillInSeconds=10
+cas.ticket.pt.numberOfUses=5
+
+#Proxy Granting Tickets Behavior
+cas.ticket.pgt.maxLength=50
+
+#Service Ticket
+cas.ticket.st.maxLength=20
+cas.ticket.st.numberOfUses=5
+cas.ticket.st.timeToKillInSeconds=10
+
+#Logout
+cas.logout.followServiceRedirects=false
+cas.logout.redirectParameter=service
+cas.logout.confirmLogout=false
+cas.logout.removeDescendantTickets=false
